@@ -9,7 +9,7 @@ Feature: login
 
     Examples: 
       | username | password |
-      | ExcelR   |      145 |
+      | Admin    |      145 |
       | Admin    | admin123 |
       | Demo     | demo23   |
 #after writing the code you should check the intendation. without intendation it will not work make a note

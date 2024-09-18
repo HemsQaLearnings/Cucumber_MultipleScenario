@@ -41,7 +41,7 @@ public class FirstLoginStepDefinition {
 		Thread.sleep(4000);
 		// Enter password
 		driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys(password);
-		Thread.sleep(5000);
+		Thread.sleep(4000);
 	}
 
 	@When("the user clicks on login button")
