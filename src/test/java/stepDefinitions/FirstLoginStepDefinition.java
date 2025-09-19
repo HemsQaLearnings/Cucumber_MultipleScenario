@@ -10,26 +10,26 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import Generic_Utilities.BaseClass;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class FirstLoginStepDefinition {
-	// Pre-condition - Given
-	// Actions - When
-	// Validations - Then
-	public WebDriver driver;
+
+	  // Instead of creating a new driver, reuse from BaseClass
+    WebDriver driver = BaseClass.getDriver();
 
 	@Given("the user is on OrangeHrm Login Page")
 	public void the_user_is_on_orange_hrm_login_page() throws InterruptedException {
 		// implement the method with selenium java test script
 
-		driver = new ChromeDriver();
-		driver.manage().deleteAllCookies();
-		driver.manage().window().maximize();
-		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		//driver = new ChromeDriver();
+		//driver.manage().deleteAllCookies();
+		//driver.manage().window().maximize();
+		//driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+	
+		System.out.println("The user is on Login Page....");
 
 	}
 

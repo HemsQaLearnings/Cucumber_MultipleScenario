@@ -9,12 +9,12 @@ import io.cucumber.junit.CucumberOptions;
 //@CucumberOptions(features = {".//features"},glue="stepDefinitions") //.feature means it will execute all the files which are inside the folder
 @CucumberOptions(
 		// features= {".//Features/"},
-		//features= {".\\src\\test\\resources\\features\\FirstLogin.feature"}, //datadrivern testing
-		features = { ".\\src\\test\\resources\\features\\DataTable_Loginn.feature" },
+		features= {".\\src\\test\\resources\\features\\FirstLogin.feature"}, //datadrivern testing
+		//features = { ".\\src\\test\\resources\\features\\DataTable_Loginn.feature" },
 
 		//features= {"@target/rerun.txt"}, //it work like retryAnnalyser like how we have
 		// implemented in hybrid framework
-		glue = { "stepDefinitions"}, 
+		glue = { "stepDefinitions", "hooks" }, 
 		plugin = { "pretty", "html:reports/myreport.html",
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 		//"rerun:target/rerun.txt",
@@ -26,8 +26,8 @@ import io.cucumber.junit.CucumberOptions;
 		publish = true, // to publish report in cucumber server
 
 //tags="@sanity" // this will execute scenarios tagged with @sanity
-tags = "@RegressionTesting"
-//tags="@FuntionalTesting"
+//tags = "@RegressionTesting"
+tags="@FuntionalTesting"
 // tags="@sanity and @regression" //Scenarios tagged with both @sanity and
 // @regression
 // tags="@sanity and not @regression" //Scenarios tagged with @sanity but not
