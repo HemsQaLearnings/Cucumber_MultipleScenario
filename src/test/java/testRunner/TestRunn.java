@@ -9,8 +9,8 @@ import io.cucumber.junit.CucumberOptions;
 //@CucumberOptions(features = {".//features"},glue="stepDefinitions") //.feature means it will execute all the files which are inside the folder
 @CucumberOptions(
 		// features= {".//Features/"},
-		//features= {".//Features/FirstLogin.feature"}, //datadrivern testing
-		features = { ".//Features/DataTable_Loginn.feature" },
+		//features= {".\\src\\test\\resources\\features\\FirstLogin.feature"}, //datadrivern testing
+		features = { ".\\src\\test\\resources\\features\\DataTable_Loginn.feature" },
 
 		//features= {"@target/rerun.txt"}, //it work like retryAnnalyser like how we have
 		// implemented in hybrid framework
